@@ -46,9 +46,10 @@ class I18nTranslator {
 
     /**
      * Translate the code message for given ns and code
-     * @param {number} code
-     * @param {string} ns
-     * @param {object} payload
+     * @param {number} code - message code
+     * @param {string} ns - namespace (e.g., zh-TW, zh-CN, en-US)
+     * @param {object} payload - some information for message
+     * @returns {string} a translated message
      */
     translate(code, ns, payload={}) {
         return this.trans(`${ns}:log._${code}`, payload)
